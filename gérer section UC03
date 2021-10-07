@@ -1,21 +1,51 @@
 Titre: UCO3 : Gérer section
-Auteur/Date: /10/2021
-Description: 
+Auteur/Date: Malik Romain Sandrine 07/10/2021
+Description: L'auteur peut ajouter, modifier ou supprimer une section
 Acteur: auteur
 
-Précondition: 
+Précondition: Un livre est chargé
 
 Scénario nominal:
-SN1 
-SN2 
-SN3 
-SN4 
-SN5 
-SN6 
-SN7 
-SN8 
+SN1 L'auteur sélectionne "gérer une section"
+SN2 Le système affiche la liste des sections existantes ainsi qu'un bouton "+" pour ajouter une nouvelle section,  un bouton "retour" et "supprimer"
+SN3 L'auteur choisit d'ajouter une nouvelle section
+SN4 Le système propose un formulaire pour remplir la partie texte
+SN5 L'auteur remplit la partie texte et valide
+SN6 Le système sauvegarde le texte dans la section et affecte un nouveau numéro à la section
+SN7 Le système affiche le formulaire pour rentrer le nom des objets avec un bouton "valider" ou "ajouter" ou "supprimer"
+SN8 L'auteur décide d'appuyer sur "continuer"
+SN9 Le système sauvegarde les objets et la section est ajoutée au livre
+SN10 Retour à l'écran d'accueil avec le livre chargé avec les deux colonnes "sections" et "enchainements"
 
-Postcondition: 
+Postcondition: Une nouvelle section a été sauvegardée
 
-ALT A1: 
+ALT A1: Modification du texte de la section
+  En SN3, l'auteur choisit une section existante
+    A1.1 Le système affiche le formulaire de texte pré remplis
+    A1.2 L'auteur modifie le texte et valide
+    A1.3 Retour en SN6 
+
+ALT A2: Suppression des objets de la section
+  En SN8, l'auteur sélectionne un objet et le supprime
+    A2.1 Le système sauvegarde l'objet de la section
+    A2.2 Retour en SN7
+
+ALT A3: Ajout des objets de la section
+  En SN8, l'auteur sélectionne "ajouter" 
+    A3.1 Le système lui donne un formulaire pour ajouter un objet à la section
+    A3.2 L'auteur met le nom de l'objet et valide
+    A3.3 Le système sauvegarde l'objet
+    A3.4 Retour en SN7
+
+ALT A4: Suppression de la section
+  En SN3, l'auteur sélectionne une section et appuie sur "supprimer" 
+    A4.1 Le système supprime la section
+    A4.2 Retour en SN2
+
+E1 : Annulation 
+  En SN2, l'auteur décide d'appuyer sur le bouton "retour"
+    E1.1 Retour à l'écran d'accueil avec le livre chargé avec les deux colonnes "sections" et "enchainements"
+    
+
+
 
