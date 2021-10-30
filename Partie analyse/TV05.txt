@@ -1,0 +1,24 @@
+TV 05 : UC01 Charger Livre alternatif (Supprimer Livre)
+
+Contexte : Après TV04 Le livre Terminator par Jean existe dans le système
+
+Entrée :
+-nom du livre : Terminator
+-auteur : Jean
+-chemin du livre : "~/dossier_test/img_test1"
+
+Scenario :
+1. Selection de "Charger un livre"
+2. Selection de "Terminator" avec auteur "Jean" et 
+pour image "~/dossier_test/img_test1" parmis les differents livres
+3. Selection de l'option "Supprimer le livre"
+4. Confirmation de la suppression
+
+Résultat attendu :
+-Le livre Terminator d'auteur Jean avec pour chemin "~/dossier_test/img_test1" n'existe plus
+-Le système affiche uniquement Charger un livre
+
+Moyen de vérification :
+-L'affichage visuel
+-Les boutons "sections" et "enchainement" ne sont plus accessibles
+-Dans la sélection Charger un livre, Terminator de Jean n'est pas là

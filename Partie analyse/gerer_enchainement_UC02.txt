@@ -1,0 +1,49 @@
+Titre: UCO2 : Gérer enchainement
+Auteur/Date: Nabil Lizeth 09/10/2021
+Description: L'auteur peut ajouter, modifier ou supprimer un enchainement
+Acteur: auteur
+
+Précondition: Un livre est chargé
+
+Scénario nominal:
+SN1 L'auteur sélectionne "Créer un enchainement"
+SN2 Le système propose une liste des sections disponibles pour le livre chargé, une partie section source et destination apparaissent et un bouton retour
+SN3 L'auteur choisit la section source et destination puis valide
+SN4 Le système affiche le nom des objets liés à la condition de l'enchainement avec un bouton "Valider" ou "Ajouter" ou "Supprimer" 
+SN5 L'auteur choisit de valider
+SN6 Le système sauvegarde les objets (liés à la condition de l'enchainement)
+SN7 Le systeme ajoute l'enchainement au livre
+SN8 Retour à l'écran d'accueil avec le livre chargé avec les deux colonnes "Section" et "Enchainement"
+
+Postcondition: Le système sauvegarde les modifications sur les enchainements
+
+ALT A1: Modification de la section source ou destination de l'enchainement 
+	A1.1 En SN1, l'auteur double clique sur un enchainement existant parmi la liste des enchainements proposées
+	A1.2 Le système affiche la partie section source/destination remplis, un bouton "Supprimer section" et un bouton "Retour"
+	A1.3 L'auteur modifie les sections et valide
+	A1.4 Retour en SN4
+
+ALT A2: Suppression de l'enchainement
+  	A4.1 En A.1.3, l'auteur appuie sur "Supprimer" 
+    	A4.2 Le système supprime l'enchainement
+    	A4.3 Retour en SN8
+
+ALT A3: Suppression des objets liés à l'enchainement
+	A3.1 En SN5, l'auteur sélectionne un objet et appuie sur "Supprimer"
+    	A3.1 Le système sauvegarde l'enchainement sans l'objet
+	A3.2 Retour en SN4
+
+ALT A4: Ajouter des objets à l'enchainement
+	A4.1 En SN5, l'auteur sélectionne "Ajouter"
+    	A4.2 Le système lui donne un formulaire pour ajouter un objet à l'enchainement
+    	A4.3 L'auteur met le nom de l'objet et valide
+    	A4.4 Le système sauvegarde l'objet
+    	A4.5 Retour en SN4
+
+E1 : Annulation 
+  	E1.1 En SN2 ou A.1.2, l'auteur décide d'appuyer sur le bouton "Retour"
+    	E1.2 Retour à l'écran d'accueil avec le livre chargé avec les deux colonnes "sections" et "enchainements"
+    
+
+
+

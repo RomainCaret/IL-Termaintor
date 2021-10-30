@@ -1,0 +1,27 @@
+TV 02 : UC03 Créer une section alternatif
+
+Contexte: Terminator est chargé et aucune section n'est créée
+
+Entrée: 
+- Le livre chargé : Terminator de Jean
+- Titre de la section : "La porte"
+- texte de la section : "Le héros arrive devant une grande porte et trouve une clef par terre."
+- Liste des objets : ["clef"]
+
+Scénario:
+1. Sélection de "créer une section"
+2. Saisir le titre "La porte"
+3. Saisir le texte de la section "Le héros arrive devant une grande porte et trouve une clef par terre." et valide
+4. Sélection du bouton "ajouter" d'objets
+5. Saisir le nom "clef" et valider l'objet
+6. Sélection du bouton "valider" fin de modification de section
+
+Résultat attendu:
+- Le système affecte le numéro 1 et le titre "La porte" à la section et la sauvegarde dans le livre Terminator de Jean avec l'objet "clef"
+- Le système affiche l'écran d'accueil avec le titre du livre chargé avec 2 colonnes "sections" et "enchainements"
+
+Moyen vérification:
+- L'affichage visuel
+- Exécuter TV04, la section 1 doit apparaitre et doit contenir le texte de la section "Le héros..."
+ et l'objet : "clef"
+

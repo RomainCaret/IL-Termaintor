@@ -1,0 +1,44 @@
+Titre: UCO1 : Ouvrir un livre
+Auteur/Date: groupe Terminator - 06/10/2021
+Description: L'auteur charge le livre dans le système pour l'éditer sinon il le crée
+Acteur: auteur
+
+Précondition: aucune
+
+Scénario nominal:
+SN1 L'auteur sélectionne "charger un livre"
+SN2 Le système affiche les livres disponible (s'il y en a pas, il affiche rien)
+SN3 Le système propose aussi de créer un livre
+SN4 L'auteur choisit le livre à charger parmis les différents livres affichés
+SN5 Le système affiche les formulaires de la fiche descriptive du livre (titre, auteur, chemin vers l'image de la couverture) 
+pour une éventuelle modification ainsi qu'un bouton pour supprimer le livre
+SN6 L'auteur ne fait pas de modifications et valide
+SN7 Le système vérifie que les formulaires sont remplis et que le couple titre/auteur soit unique
+SN8 Le système affiche le titre du livre en haut et deux colonnes "Section" et "Enchainement" avec ses sections et enchainements apparaîssent
+
+Postcondition: Le système a chargé en mémoire le livre, ses sections et ses enchainements
+
+ALT A1: création d'un livre
+	A1.1 En SN4, l'auteur choisit de créer un livre
+	A1.2 le système afficher les formulaires de la fiche descriptive du livre (titre, auteur, chemin vers l'image de la couverture)
+	A1.3 l'auteur remplit le formulaire et valide
+	A1.4 retour au SN7
+
+ALT A2: formulaire non valide
+	A.2.1En SN7, le système détecte que les formulaires ne sont pas valides (titre/auteur non unique ou vide)
+	A2.2 retour SN5
+
+ALT A3: suppression d'un livre
+	A3.1 En SN6, l'auteur choisit de supprimer le livre
+	A3.2 le système affiche une fenêtre de confirmation
+	A3.3 l'auteur confirme
+	A3.4 le système supprime le livre avec ses sections et ses enchainements
+	A3.5 retour en SN2
+
+ALT A4: annulation supression
+	A4.1 En A3.2 l'auteur ne confirme pas
+	A4.2 retour en SN2
+
+ALT A5: modification formulaire
+	A5.1 En SN6, l'auteur fait des modifications
+	A5.2 Retour en SN7 

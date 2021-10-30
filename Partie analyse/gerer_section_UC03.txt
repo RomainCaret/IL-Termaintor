@@ -1,0 +1,46 @@
+Titre: UCO3 : Gérer section
+Auteur/Date: Malik Romain Sandrine 07/10/2021
+Description: L'auteur peut ajouter, modifier ou supprimer une section
+Acteur: auteur
+
+Précondition: Un livre est chargé
+
+Scénario nominal:
+SN1 L'auteur sélectionne le bouton "Créer une section"
+SN2 Le système propose un formulaire pour remplir la partie texte, le nom de la section et un bouton retour
+SN3 L'auteur remplit la partie texte, le nom de la section et valide
+SN4 Le système sauvegarde le texte dans la section, le titre et affecte un nouveau numéro à la section
+SN5 Le système affiche les objets de la section et des boutons "Valider", "Ajouter" ou "Supprimer"
+SN6 L'auteur décide d'appuyer sur "Valider"
+SN7 Le système sauvegarde les objets et la section est ajoutée au livre
+SN8 Retour à l'écran d'accueil avec le livre chargé avec les deux colonnes "Section" et "Enchainement"
+
+Postcondition: Le système sauvegarde les modifications sur les sections
+
+ALT A1: Modification du texte de la section
+  	A1.1 En SN1, l'auteur double clique sur une section existante parmi la liste des sections proposées
+    	A1.2 Le système affiche le formulaire de texte pré-remplis, le titre, un bouton "Supprimer section" et un bouton "Retour"
+    	A1.3 L'auteur modifie le texte et valide
+    	A1.4 Retour en SN4 
+
+ALT A2: Suppression de la section
+  	A2.1 En A.1.3, l'auteur appuie sur "Supprimer" 
+    	A2.2 Le système supprime la section
+    	A2.3 Retour en SN8
+
+ALT A3: Suppression des objets de la section
+  	A3.1 En SN6, l'auteur sélectionne un objet et appuie sur "Supprimer"
+    	A3.2 Le système sauvegarde la section sans l'objet
+    	A3.3 Retour en SN5
+
+ALT A4: Ajout des objets de la section
+  	A4.1 En SN6, l'auteur sélectionne "ajouter" 
+    	A4.2 Le système lui donne un formulaire pour ajouter un objet à la section
+    	A4.3 L'auteur met le nom de l'objet et valide
+    	A4.4 Le système sauvegarde l'objet
+    	A4.5 Retour en SN5
+
+E1 : Annulation 
+  	E1.1 En SN2 ou A.1.2, l'auteur décide d'appuyer sur le bouton "Retour"
+    	E1.2 Retour à l'écran d'accueil avec le livre chargé avec les deux colonnes "sections" et "enchainements"
+

@@ -1,0 +1,25 @@
+TV 01 : UC01 Charger Livre alternatif (Creer Livre)
+
+Contexte : Aucun livre est chargé
+
+Entrée :
+-nom du livre : Terminator
+-auteur : Jean
+-chemin du livre : "~/dossier_test/img_test1"
+
+Scenario :
+1. Selection de "Charger un livre"
+2. Selection de "Creer un livre"
+3. Saisir le nom du livre "Terminator", l'auteur "Jean" et le chemin "~/dossier_test/img_test1"
+
+Résultat attendu :
+-Le livre Terminator d'auteur Jean avec pour chemin "~/dossier_test/img_test1"
+a ete crée.
+-Le système affiche Terminator en haut et les 2 boutons sections et enchainements.
+
+Moyen de vérification :
+-L'affichage visuel
+-Les boutons "sections" et "enchainement" doivent etre accessibles
+
+
+	

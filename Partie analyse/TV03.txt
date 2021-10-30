@@ -1,0 +1,24 @@
+TV 03 : UC03 Créer une section nominale
+
+Contexte: Terminator est chargé et la section 1 a été créée
+
+Entrée: 
+- Le livre chargé : Terminator de Jean
+- Le titre de la section "Le donjon"
+- texte de la section : "Le héros entre dans le donjon."
+
+Scénario:
+1. Sélection de "créer une section"
+2. Saisir le titre "Le donjon"
+3. Saisir le texte de la section "Le héros entre dans le donjon." et valide
+4. Sélection du bouton "valider" fin de modification de section
+
+Résultat attendu:
+- Le système affecte le numéro 2 et le titre "le donjon" à la section et la sauvegarde dans le livre Terminator de Jean 
+- Le système affiche l'écran d'accueil avec le titre du livre chargé avec 2 colonnes "sections" et "enchainements"
+
+Moyen vérification:
+- L'affichage visuel
+- Exécuter TV04, la section 1 doit apparaitre et doit contenir le texte de la section "Le héros..."
+ et l'objet : "clef", et la section 2 doit apparaitre et doit contenir le texte de la section "Le héros..."
+
